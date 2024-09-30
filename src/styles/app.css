@@ -1,0 +1,227 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #4CAF50;
+    font-size: 2.5em;
+    margin-top: 20px;
+    font-weight: 600;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Form Styling */
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Add gap for spacing between input fields */
+  }
+  
+  input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  button {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  p.error {
+    color: red;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+  
+  /* Table Styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+  }
+  
+  th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+  }
+  
+  td {
+    background-color: #f9f9f9;
+  }
+  
+  tr:nth-child(even) td {
+    background-color: #f2f2f2;
+  }
+  
+  td button {
+    background-color: #2196F3;
+    padding: 8px 12px;
+    margin-right: 5px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  td button:hover {
+    background-color: #1976d2;
+  }
+  
+  td button.delete {
+    background-color: #f44336 !important;
+  }
+  
+  td button.delete:hover {
+    background-color: #d32f2f !important;
+  }
+  
+  /* Responsive Styles */
+  
+  /* Tablets and Smaller Desktops (768px and below) */
+  @media (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+  
+    h1 {
+      font-size: 2em;
+    }
+  
+    table, th, td {
+      font-size: 14px;
+      padding: 12px;
+    }
+  
+    form {
+      gap: 10px;
+      flex-direction: column;
+    }
+  
+    input {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    button {
+      font-size: 14px;
+      padding: 10px;
+      width: 100%;
+    }
+  }
+  
+  /* Mobile Phones (480px and below) */
+  @media (max-width: 480px) {
+    .container {
+      padding: 10px;
+      width: 100%;
+    }
+  
+    h1 {
+      font-size: 1.8em;
+    }
+  
+    form {
+      flex-direction: column;
+    }
+  
+    input {
+      padding: 8px;
+      font-size: 14px;
+      width: 100%; /* Ensure input fills the screen */
+    }
+  
+    table {
+      font-size: 12px;
+    }
+  
+    th, td {
+      padding: 8px;
+    }
+  
+    td button {
+      padding: 6px 8px;
+      font-size: 12px;
+    }
+  
+    /* Scrollable Table on Small Screens */
+    table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+  
+    table thead {
+      display: none; /* Hide the table header on small screens */
+    }
+  
+    table tr {
+      display: block;
+      margin-bottom: 10px;
+    }
+  
+    table td {
+      display: block;
+      text-align: right;
+      position: relative;
+      padding-left: 50%;
+      white-space: normal;
+      border-bottom: 1px solid #ddd;
+    }
+  
+    table td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 10px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  
+    td button {
+      display: inline-block;
+      margin-top: 5px;
+    }
+  }
+  
